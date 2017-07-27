@@ -138,5 +138,52 @@ namespace ValidateSample.Controllers
             return View();
         }
 
+
+        public ActionResult login01()
+        {
+            if (ModelState.IsValid)
+            {
+                return View();
+            }
+
+            return Content("登入成功");
+        }
+
+        //public ActionResult login01()
+        //{
+        //    return View();
+        //}
+
+        //[HttpPost]
+
+        //public ActionResult login01(FormatViewModel data)
+        //{
+        //    if (ModelState.IsValid)
+        //    {
+        //        return View();
+        //    }
+        //    return View(data);
+        //}
+
+
+
+        [HttpPost]
+        //[ValidateInput(false)]
+        public ActionResult login01(FormatViewModel data)
+        {
+
+            if (ModelState.IsValid)
+            {
+                return Content("登入成功");
+
+            }
+
+            return View();
+
+
+        }
+
+
+
     }
 }

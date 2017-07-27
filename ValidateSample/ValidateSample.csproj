@@ -195,6 +195,7 @@
     </Compile>
     <Compile Include="Models\AccountInfo.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\FormatViewModel.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\Model1.Context.cs">
       <AutoGen>True</AutoGen>
@@ -223,6 +224,7 @@
     <Compile Include="Models\TestTypeViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="ValidateAttribute\EmailAttribute.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Data\Database1.mdf" />
@@ -268,6 +270,8 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
+    <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
+    <Content Include="Views\Home\Remote.cshtml" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -289,7 +293,6 @@
     <Content Include="Views\Account\_RemoveAccountPartial.cshtml" />
     <Content Include="Views\Account\_SetPasswordPartial.cshtml" />
     <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
-    <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
     <Content Include="Views\Account\Login.cshtml" />
     <Content Include="Views\Account\Manage.cshtml" />
     <Content Include="Views\Account\Register.cshtml" />
@@ -299,7 +302,6 @@
     <Content Include="Views\Home\Format.cshtml" />
     <Content Include="Views\Home\Number.cshtml" />
     <Content Include="Views\Home\Regex.cshtml" />
-    <Content Include="Views\Home\Remote.cshtml" />
     <Content Include="Views\Home\HtmlTest.cshtml" />
     <Content Include="Views\ImageUpload\Index.cshtml" />
     <Content Include="Views\Tables\Create.cshtml" />
@@ -307,6 +309,9 @@
     <Content Include="Views\Tables\Details.cshtml" />
     <Content Include="Views\Tables\Edit.cshtml" />
     <Content Include="Views\Tables\Index.cshtml" />
+    <Content Include="Views\Home\login01.cshtml" />
+    <Content Include="Views\Home\login02.cshtml" />
+    <Content Include="Views\Account\ExternalLogin.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Areas\Admin\Models\" />
