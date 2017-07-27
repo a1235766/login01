@@ -1,0 +1,80 @@
+﻿@model ValidateSample.Models.TestBaseViewModel
+
+@{
+    ViewBag.Title = "Base";
+}
+
+<h2>Base</h2>
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <h4>TestBaseViewModel</h4>
+        <hr />
+        @Html.ValidationSummary(true)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.必填文字, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.必填文字, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.必填文字)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.文字, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.文字, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.文字)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.密碼, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.密碼, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.密碼)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.確認密碼, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.確認密碼, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.確認密碼)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+
+    @*<script type="text/javascript">
+        $.validator.addMethod("banword", function (value, element, param) {
+            if (value === false) {
+                return true;
+            }
+            if (value.indexOf(param) !== -1) {
+                return false;
+            } else {
+                return true;
+            }
+        });
+        $.validator.unobtrusive.adapters.addSingleVal("banword", "input");
+    </script>*@
+
+}

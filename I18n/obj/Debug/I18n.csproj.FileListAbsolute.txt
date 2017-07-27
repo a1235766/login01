@@ -1,0 +1,14 @@
+R:\ValidateSample\I18n\bin\Debug\I18n.dll
+R:\ValidateSample\I18n\bin\Debug\I18n.pdb
+R:\ValidateSample\I18n\obj\Debug\I18n.csprojResolveAssemblyReference.cache
+R:\ValidateSample\I18n\obj\Debug\I18n.Resource1.resources
+R:\ValidateSample\I18n\obj\Debug\I18n.csproj.GenerateResource.Cache
+R:\ValidateSample\I18n\obj\Debug\I18n.dll
+R:\ValidateSample\I18n\obj\Debug\I18n.pdb
+D:\mvc上課\Session3\ValidateSample\I18n\bin\Debug\I18n.dll
+D:\mvc上課\Session3\ValidateSample\I18n\bin\Debug\I18n.pdb
+D:\mvc上課\Session3\ValidateSample\I18n\obj\Debug\I18n.csprojResolveAssemblyReference.cache
+D:\mvc上課\Session3\ValidateSample\I18n\obj\Debug\I18n.Resource1.resources
+D:\mvc上課\Session3\ValidateSample\I18n\obj\Debug\I18n.csproj.GenerateResource.Cache
+D:\mvc上課\Session3\ValidateSample\I18n\obj\Debug\I18n.dll
+D:\mvc上課\Session3\ValidateSample\I18n\obj\Debug\I18n.pdb

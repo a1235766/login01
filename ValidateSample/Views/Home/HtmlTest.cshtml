@@ -1,0 +1,72 @@
+﻿@model ValidateSample.Models.TestHtmlViewModel
+
+@{
+    ViewBag.Title = "HtmlTest";
+}
+
+<h2>HtmlTest</h2>
+<div class="row">
+    <div class="col-md-6">
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-horizontal">
+                <h4>TestHtmlViewModel</h4>
+                <hr />
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                <div class="form-group">
+                    @Html.LabelFor(model => model.AllowHtml, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.AllowHtml, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.AllowHtml, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.DesAllowHtml, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.DesAllowHtml, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.DesAllowHtml, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <input type="submit" value="Create" class="btn btn-default"/>
+                    </div>
+                    <code> &lt;strong&gt;test&lt;/strong&gt;&lt;hr /&gt;&lt;script&gt;alert(&#39;a&#39;);&lt;/script&gt;&lt;p&gt;AAA&lt;/p&gt;</code>
+                </div>
+            </div>
+        }
+    </div>
+    <div class="col-md-6">
+        <div class="form-horizontal">
+            <div class="form-group">
+                <label class="control-label">AllowHtml</label>
+                <div>
+                    <h1>
+                        @(ViewData["a"])
+                    </h1>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label">DesAllowHtml</label>
+                <div>
+                    <h1>
+                    @(ViewData["d"])
+                    </h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

@@ -1,0 +1,73 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>SkillTree</h1>
+    <p class="lead">本範例為 SkillTree （<a href="https://skilltree.my" target="_blank">https://skilltree.my</a>）製作。</p>
+    <p>ASP.NET MVC 內建許多資料驗證功能，並且保留了相當彈性，使用 ASP.NET MVC 開發的人員，如果不了解內建驗證的機制，那是非常可惜的。</p>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>型別驗證</h2>
+        <p>
+            對於基本型別「數值」「日期」「Bool」在無須任何的設定之下就支援驗證。
+        </p>
+        <p><a class="btn btn-default" href="@Url.Action("Type")">前往 &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>基本驗證</h2>
+        <ul>
+            <li>Required（必填）</li>
+            <li>StringLength（字串長度）</li>
+            <li>Compare（字串比對）</li>
+            <li>RegularExpression（正則表示式）</li>
+            <li>Remote（遠端驗證）</li>
+        </ul>
+        <p><a class="btn btn-default" href="@Url.Action("Base")">前往 &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>格式驗證</h2>
+        <ul>
+            <li>EmailAddress（電子郵件位置）</li>
+            <li>Url（網址）</li>
+            <li>ImageUrl（圖片位置）</li>
+            <li>CreditCard（信用卡）</li>
+        </ul>
+        <p><a class="btn btn-default" href="@Url.Action("Format")">前往 &raquo;</a></p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-4">
+        <h2>內建數值驗證</h2>
+        <ul>
+            <li>MaxLength（最大長度）</li>
+            <li>MinLength（最小長度）</li>
+            <li>Range（範圍）</li>
+        </ul>
+        <p><a class="btn btn-default" href="@Url.Action("Number")">前往 &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>萬用驗證</h2>
+        利用 RegularExpression 正規表示式，拿到萬用的境界
+        <p><a class="btn btn-default" href="@Url.Action("Regex")">前往 &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>遠端驗證</h2>
+        使用類似AJAX的作法，讓前端值送到後端檢查
+        <p><a class="btn btn-default" href="@Url.Action("Remote")">前往 &raquo;</a></p>
+        <p><a class="btn btn-default" href="@Url.Action("Index",new{controller="Default1",area="admin"})">Area &raquo;</a></p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-4">
+        <h2>HTML</h2>
+        <ul>
+            <li>ValidateInput(false)</li>
+            <li>AllowHtml</li>
+            <li>AntiXSS</li>
+        </ul>
+        <p><a class="btn btn-default" href="@Url.Action("HtmlTest")">前往 &raquo;</a></p>
+    </div>
+</div>

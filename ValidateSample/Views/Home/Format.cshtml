@@ -1,0 +1,65 @@
+﻿@model ValidateSample.Models.TestFormatViewModel
+
+@{
+    ViewBag.Title = "Format";
+}
+
+<h2>Format</h2>
+
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>TestFormatViewModel</h4>
+        <hr />
+        @Html.ValidationSummary(true)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.電子郵件, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.電子郵件, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.電子郵件)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.網址, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.網址, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.網址)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.圖片位置, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.圖片位置, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.圖片位置)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.信用卡號碼, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.信用卡號碼, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.信用卡號碼)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

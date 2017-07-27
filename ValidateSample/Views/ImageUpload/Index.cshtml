@@ -1,0 +1,11 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<h2>非圖片上傳阻擋示範</h2>
+
+@using (Html.BeginForm("Index", "ImageUpload", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <input type="file" name="upload" />
+    <input type="submit" value="上傳" />
+}
